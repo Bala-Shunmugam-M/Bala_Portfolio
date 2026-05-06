@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Lean Waste Assessment — Bala Shunmugam M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/project.css"/>
+  <style>:root{--accent:#1e3a5f;--accent-light:#eff6ff;--accent-mid:#93c5fd;--accent-dark:#142843;}</style>
+  <link rel="stylesheet" href="css/common.css" />
+</head>
+<body>
+<nav class="p-nav">
+  <a href="projects.html" class="p-nav-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>All Projects</a>
+  <div class="p-nav-right"><span class="p-nav-name">Bala Shunmugam M</span><span class="p-nav-num">06 / 08</span></div>
+</nav>
+
+<section class="p-hero">
+  <div class="p-eyebrow"><div class="p-eyebrow-dot"></div><span class="p-eyebrow-text">Lean · Value Stream Mapping · Waste Elimination</span></div>
+  <h1 class="p-title">Lean Manufacturing Waste Assessment<br><em>Shop Floor</em></h1>
+  <p class="p-desc">Applied the Lean 7-waste framework and Value Stream Mapping to a manufacturing shop floor. Identified Waiting (40% of delay), Overproduction, and Defects as the top-3 wastes. Prescribed a Kanban pull system and inline quality inspection to reduce lead time by 22% and WIP by 30%.</p>
+  <div class="p-tags">
+    <span class="p-tag p-tag-accent">Lean · Waste Elimination</span>
+    <span class="p-tag">Value Stream Mapping</span><span class="p-tag">Kanban</span>
+    <span class="p-tag">7 Wastes (TIMWOOD)</span><span class="p-tag">Pull System</span>
+  </div>
+  <div class="p-impact">
+    <div class="p-impact-item"><div class="p-impact-val">22%</div><div class="p-impact-label">Lead time reduction</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">30%</div><div class="p-impact-label">WIP inventory reduction</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">40%</div><div class="p-impact-label">Of delay from Waiting waste alone</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">85%</div><div class="p-impact-label">Top 3 wastes share of total delay</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">7 wastes</div><div class="p-impact-label">All mapped and quantified</div></div>
+  </div>
+</section>
+
+<div class="p-content">
+  <div class="p-section">
+    <div class="p-section-label">Analysis</div>
+    <div class="p-section-title">Mapping Value, Eliminating Waste</div>
+    <div class="p-tabs">
+      <div class="p-tab active" onclick="tab(this,'p6a')">VSM &amp; 7 Wastes</div>
+      <div class="p-tab" onclick="tab(this,'p6b')">Waste Quantification</div>
+      <div class="p-tab" onclick="tab(this,'p6c')">Solution Design</div>
+      <div class="p-tab" onclick="tab(this,'p6d')">Expected Impact</div>
+    </div>
+
+    <div id="p6a" class="p-panel active">
+      <div class="p-callout">
+        <div class="p-callout-title">What is Value Stream Mapping?</div>
+        <div class="p-callout-body">VSM traces the flow of materials and information from raw material to customer delivery. Every step is classified as either <strong>value-adding</strong> (customer pays for it), <strong>necessary non-value-adding</strong> (required but adds no customer value), or <strong>pure waste</strong> (should be eliminated). Only value-adding steps should be optimised; waste steps should be eliminated entirely.</div>
+      </div>
+      <div class="p-table-wrap">
+        <table class="p-table">
+          <thead><tr><th>Waste (TIMWOOD)</th><th>Description</th><th>Observed at Facility</th><th>Share of Delay</th></tr></thead>
+          <tbody>
+            <tr class="row-accent"><td><strong>Waiting</strong></td><td>Idle time between process steps</td><td>WIP queuing between stations — operators idle while downstream processes catch up</td><td class="fw-6" style="color:var(--accent)">40%</td></tr>
+            <tr class="row-accent"><td><strong>Overproduction</strong></td><td>Making more than immediately needed</td><td>Push scheduling causes WIP buildup; each station produces to capacity regardless of downstream need</td><td class="fw-6" style="color:var(--accent)">25%</td></tr>
+            <tr class="row-accent"><td><strong>Defects</strong></td><td>Rework and scrap</td><td>Quality check only at final stage — defects detected late, requiring full rework through multiple stages</td><td class="fw-6" style="color:var(--accent)">20%</td></tr>
+            <tr><td>Transport</td><td>Unnecessary movement of materials</td><td>Minor — floor layout reasonably efficient</td><td>7%</td></tr>
+            <tr><td>Inventory</td><td>Excess materials in process</td><td>Symptom of overproduction; reduces separately when push eliminated</td><td>5%</td></tr>
+            <tr><td>Motion</td><td>Unnecessary operator movement</td><td>Minimal — workstation layout adequate</td><td>2%</td></tr>
+            <tr><td>Over-processing</td><td>Doing more work than required</td><td>Not significant in this facility</td><td>1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="p6b" class="p-panel">
+      <div class="p-barchart">
+        <div class="p-barchart-title">Waste Distribution — Share of Total Non-Value-Adding Time</div>
+        <div class="p-bar-row"><div class="p-bar-label">Waiting</div><div class="p-bar-track"><div class="p-bar-fill" style="width:40%;background:#f87171"></div></div><div class="p-bar-val">40%</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Overproduction</div><div class="p-bar-track"><div class="p-bar-fill" style="width:25%;background:#fb923c"></div></div><div class="p-bar-val">25%</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Defects</div><div class="p-bar-track"><div class="p-bar-fill" style="width:20%;background:#fbbf24"></div></div><div class="p-bar-val">20%</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Transport</div><div class="p-bar-track"><div class="p-bar-fill" style="width:7%;background:#60a5fa"></div></div><div class="p-bar-val">7%</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Other</div><div class="p-bar-track"><div class="p-bar-fill" style="width:8%;background:#d1d5db"></div></div><div class="p-bar-val">8%</div></div>
+      </div>
+      <div class="p-findings">
+        <div class="p-finding"><div class="p-finding-num">01</div><div class="p-finding-text"><strong>Waiting (40%):</strong> The biggest waste. When one station runs faster than the next, WIP accumulates and the faster station must stop. Root cause: push scheduling with no production ceiling between stations.</div></div>
+        <div class="p-finding"><div class="p-finding-num">02</div><div class="p-finding-text"><strong>Overproduction (25%):</strong> Each station is scheduled to run at 100% capacity regardless of downstream status. This inflates WIP and cycle time. A unit sitting in queue is not customer value — it is lead time.</div></div>
+        <div class="p-finding"><div class="p-finding-num">03</div><div class="p-finding-text"><strong>Defects (20%):</strong> Quality inspection only at the final station means defects travel through 3–4 upstream stages before detection. A defect found late costs 5–10× more to fix than one caught at source. The rework loop also consumes production capacity.</div></div>
+      </div>
+    </div>
+
+    <div id="p6c" class="p-panel">
+      <div class="p-card-grid">
+        <div class="p-card" style="--card-color:var(--green)"><div class="p-card-label">Solution 1 — Kanban Pull System</div><div class="p-card-text">Replace push scheduling with a <strong>Kanban pull system</strong>. Each station only produces when the downstream station signals demand via a Kanban card. This automatically caps WIP between stations to the Kanban limit, eliminating overproduction and most waiting waste simultaneously.</div></div>
+        <div class="p-card" style="--card-color:var(--blue)"><div class="p-card-label">Solution 2 — Inline Quality Gates</div><div class="p-card-text">Add a quality check at the output of each station (or at minimum, at the midpoint of the production flow). <strong>Stop-detect-fix at source</strong> rather than detect-rework at the end. Catch defects when they cost 1× to fix rather than 5–10× at the end of the line.</div></div>
+        <div class="p-card" style="--card-color:var(--amber)"><div class="p-card-label">Solution 3 — WIP Cap</div><div class="p-card-text">Set a maximum WIP limit between each pair of stations equal to 2× the takt time buffer. When the WIP cap is hit, the upstream station stops — not because of failure, but by design. This forces pace synchronisation without requiring complex scheduling software.</div></div>
+        <div class="p-card" style="--card-color:#7c3aed"><div class="p-card-label">Why This Order Matters</div><div class="p-card-text">Addressing Waiting before Defects would be wrong: if you first cap WIP without fixing defects, defective units immediately block the line. <strong>Fix quality first</strong> (so pull doesn't amplify defects), then introduce pull, then cap WIP. Sequence matters in Lean implementation.</div></div>
+      </div>
+    </div>
+
+    <div id="p6d" class="p-panel">
+      <div class="p-metrics">
+        <div class="p-metric"><div class="p-metric-name">Lead time reduction</div><div class="p-metric-val c-green">22<span style="font-size:14px">%</span></div><div class="p-metric-sub">From eliminating top 3 wastes</div></div>
+        <div class="p-metric"><div class="p-metric-name">WIP inventory reduction</div><div class="p-metric-val c-green">30<span style="font-size:14px">%</span></div><div class="p-metric-sub">From pull system and WIP caps</div></div>
+        <div class="p-metric"><div class="p-metric-name">Rework rate</div><div class="p-metric-val" style="color:var(--blue)">↓ sharply</div><div class="p-metric-sub">From inline quality gates</div></div>
+      </div>
+      <div class="p-recs">
+        <div class="p-rec"><span class="p-rec-tag rec-now">Phase 1</span><div class="p-rec-text"><strong>Inline quality check at Stage 3</strong> (midpoint) — add a visual inspection step with a clear pass/fail criterion. Document defect types for root-cause analysis.</div></div>
+        <div class="p-rec"><span class="p-rec-tag rec-mid">Phase 2</span><div class="p-rec-text"><strong>Introduce Kanban between Stages 3 and 4</strong> — start with just one interface to prove the concept and measure WIP and lead time improvement before extending to all stations.</div></div>
+        <div class="p-rec"><span class="p-rec-tag rec-long">Phase 3</span><div class="p-rec-text"><strong>Full pull system across all 5 stations</strong> — extend Kanban to all inter-station flows. Set WIP caps. Monitor takt time adherence weekly and rebalance station workloads if needed.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="p-footer">
+  <span class="p-footer-name">Bala Shunmugam M · B.E. EEE + MBA Operations</span>
+  <div class="p-footer-links"><a href="projects.html"> All Projects</a><a href="index.html">Portfolio</a></div>
+</footer>
+<script>function tab(el,id){const w=el.closest('.p-section');w.querySelectorAll('.p-tab').forEach(t=>t.classList.remove('active'));w.querySelectorAll('.p-panel').forEach(p=>p.classList.remove('active'));el.classList.add('active');w.querySelector('#'+id).classList.add('active');}</script>
+</body>
+</html>
+
+

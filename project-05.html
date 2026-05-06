@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Motor Energy Audit — Bala Shunmugam M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/project.css"/>
+  <style>:root{--accent:#064e3b;--accent-light:#ecfdf5;--accent-mid:#86d5b3;--accent-dark:#033326;}</style>
+  <link rel="stylesheet" href="css/common.css" />
+</head>
+<body>
+<nav class="p-nav">
+  <a href="projects.html" class="p-nav-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>All Projects</a>
+  <div class="p-nav-right"><span class="p-nav-name">Bala Shunmugam M</span><span class="p-nav-num">05 / 08</span></div>
+</nav>
+
+<section class="p-hero">
+  <div class="p-eyebrow"><div class="p-eyebrow-dot"></div><span class="p-eyebrow-text">EEE Advantage · Energy Audit · Industrial Facility</span></div>
+  <h1 class="p-title">Motor Energy Efficiency Audit<br><em>Industrial Facility</em></h1>
+  <p class="p-desc">Leveraged B.E. EEE knowledge to audit 8 industrial motors in a manufacturing facility. Used clamp meter and power analyser measurements to identify load mismatches — 3 motors severely underloaded and 2 overloaded — and prescribed targeted VFD and right-sizing interventions with a 14-month payback.</p>
+  <div class="p-tags">
+    <span class="p-tag p-tag-accent">EEE Advantage · Energy</span>
+    <span class="p-tag">Motor Audit</span><span class="p-tag">VFD / Variable Speed Drives</span>
+    <span class="p-tag">Load Factor Analysis</span><span class="p-tag">Payback Calculation</span>
+  </div>
+  <div class="p-impact">
+    <div class="p-impact-item"><div class="p-impact-val">~20%</div><div class="p-impact-label">Projected electricity consumption reduction</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">14 mo</div><div class="p-impact-label">VFD investment payback period</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">3 motors</div><div class="p-impact-label">Running below 40% load factor</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">2 motors</div><div class="p-impact-label">Overloaded — thermal stress risk</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">8 motors</div><div class="p-impact-label">Audited across facility</div></div>
+  </div>
+</section>
+
+<div class="p-content">
+  <div class="p-section">
+    <div class="p-section-label">Analysis</div>
+    <div class="p-section-title">Measuring What Everyone Assumed Was Fine</div>
+    <div class="p-tabs">
+      <div class="p-tab active" onclick="tab(this,'p5a')">Problem &amp; Method</div>
+      <div class="p-tab" onclick="tab(this,'p5b')">Audit Results</div>
+      <div class="p-tab" onclick="tab(this,'p5c')">VFD Science</div>
+      <div class="p-tab" onclick="tab(this,'p5d')">Recommendations</div>
+    </div>
+
+    <div id="p5a" class="p-panel active">
+      <div class="p-card-grid">
+        <div class="p-card" style="--card-color:#dc2626"><div class="p-card-label">Problem</div><div class="p-card-text">High electricity bills with no clear explanation. Motors were sized based on <strong>peak load assumptions</strong> made during plant design — never re-evaluated against actual operating conditions. No one had measured actual motor loading since installation.</div></div>
+        <div class="p-card" style="--card-color:var(--blue)"><div class="p-card-label">Methodology</div><div class="p-card-text">Used a <strong>clamp meter and power analyser</strong> on each motor's supply cable during normal production hours. Measured: voltage (V), current (A), power factor (cos φ), and input kW. Calculated load factor = Actual kW / Rated kW for each motor.</div></div>
+        <div class="p-card" style="--card-color:var(--amber)"><div class="p-card-label">Why EEE Background Matters</div><div class="p-card-text">Understanding motor equivalent circuit, slip, magnetising current, and the relationship between load factor and efficiency allowed me to interpret the measurements correctly — knowing that a motor at 40% load has poor efficiency due to high reactive current, not just low real power.</div></div>
+        <div class="p-card" style="--card-color:var(--green)"><div class="p-card-label">Key Finding</div><div class="p-card-text">3 of 8 motors were running below 40% load — the <strong>efficiency sweet spot is 75–100%</strong>. Below 40%, iron losses and magnetising current dominate, making efficiency worse than nameplate suggests. 2 motors were overloaded, risking insulation damage and premature failure.</div></div>
+      </div>
+    </div>
+
+    <div id="p5b" class="p-panel">
+      <div class="p-table-wrap">
+        <table class="p-table">
+          <thead><tr><th>Motor</th><th>Rated kW</th><th>Measured kW</th><th>Load Factor</th><th>Power Factor</th><th>Recommendation</th></tr></thead>
+          <tbody>
+            <tr><td>M1 — Conveyor drive</td><td>22</td><td>9.2</td><td>42%</td><td>0.61</td><td>VFD installation</td></tr>
+            <tr class="row-warn"><td><strong>M2 — Main pump</strong></td><td>37</td><td>12.1</td><td>33%</td><td>0.55</td><td><strong>Right-size to 15 kW + VFD</strong></td></tr>
+            <tr class="row-warn"><td><strong>M3 — Cooling fan</strong></td><td>30</td><td>10.8</td><td>36%</td><td>0.57</td><td><strong>Right-size to 15 kW + VFD</strong></td></tr>
+            <tr><td>M4 — Compressor</td><td>45</td><td>38.2</td><td>85%</td><td>0.88</td><td>No change — efficient</td></tr>
+            <tr><td>M5 — Mixer</td><td>18.5</td><td>15.9</td><td>86%</td><td>0.87</td><td>No change — efficient</td></tr>
+            <tr class="row-accent"><td><strong>M6 — Exhaust fan</strong></td><td>15</td><td>16.8</td><td>112%</td><td>0.82</td><td><strong>Replace with 18.5 kW unit</strong></td></tr>
+            <tr class="row-accent"><td><strong>M7 — Feed pump</strong></td><td>22</td><td>24.1</td><td>110%</td><td>0.83</td><td><strong>Replace with 30 kW unit</strong></td></tr>
+            <tr><td>M8 — Agitator</td><td>11</td><td>8.4</td><td>76%</td><td>0.85</td><td>No change — efficient</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="p-callout">
+        <div class="p-callout-title">Reading the data</div>
+        <div class="p-callout-body">Row highlighted in red = overloaded (load factor > 100%) — immediate risk. Row highlighted in blue = severely underloaded — candidates for right-sizing and VFD. Motors M4, M5, M8 are already operating efficiently and require no intervention.</div>
+      </div>
+    </div>
+
+    <div id="p5c" class="p-panel">
+      <div class="p-callout">
+        <div class="p-callout-title">The Affinity Laws — why VFDs save so much energy</div>
+        <div class="p-callout-body">For centrifugal machines (pumps, fans): Flow  Speed. Pressure  Speed². Power  Speed³. A 20% reduction in speed = a 49% reduction in power consumed. This cube relationship is why VFDs produce dramatic energy savings even with modest speed reductions.</div>
+      </div>
+      <div class="p-findings">
+        <div class="p-finding"><div class="p-finding-num">01</div><div class="p-finding-text"><strong>Throttling valve vs VFD:</strong> The facility was controlling flow by partially closing valves — like driving a car with the accelerator fully pressed while braking. The motor still runs at full speed, consuming full power, while the valve dissipates energy as heat. A VFD slows the motor instead — using only the power actually needed.</div></div>
+        <div class="p-finding"><div class="p-finding-num">02</div><div class="p-finding-text"><strong>Soft-start benefit:</strong> VFDs also eliminate the inrush current spike at motor start (typically 6–8× rated current for a direct-on-line start). This extends motor and cable life and reduces electrical demand charges on the utility bill.</div></div>
+        <div class="p-finding"><div class="p-finding-num">03</div><div class="p-finding-text"><strong>Power factor improvement:</strong> Active front-end VFD topologies can maintain near-unity power factor at the supply point — reducing reactive power demand and eliminating power factor penalty charges on the electricity tariff.</div></div>
+      </div>
+    </div>
+
+    <div id="p5d" class="p-panel">
+      <div class="p-recs">
+        <div class="p-rec"><span class="p-rec-tag rec-now">Priority 1</span><div class="p-rec-text"><strong>Replace M6 and M7 immediately</strong> — both are overloaded (110–112% load factor), risking winding insulation failure and unexpected breakdown. A motor burnout is a much larger cost than a planned replacement.</div></div>
+        <div class="p-rec"><span class="p-rec-tag rec-now">Priority 2</span><div class="p-rec-text"><strong>Right-size M2 and M3 and install VFDs</strong> — replace the oversized 30–37 kW motors with correctly sized 15 kW units. Add VFD to each. Projected saving: ~45 kW continuous reduction = ~110,000 kWh/year saved.</div></div>
+        <div class="p-rec"><span class="p-rec-tag rec-mid">Priority 3</span><div class="p-rec-text"><strong>Install VFD on M1 (conveyor drive)</strong> — at 42% load factor, a VFD can reduce speed by 20–30% during partial-load periods, cutting power by 49–66% during those intervals.</div></div>
+        <div class="p-rec"><span class="p-rec-tag rec-long">Financial summary</span><div class="p-rec-text">Total projected reduction: ~20% of facility electricity consumption. Estimated VFD investment for M1–M3: ₹2.8–3.5 lakh. Annual electricity savings at ₹8/kWh: ₹2.8–3.2 lakh/year. Payback: <strong>~14 months</strong>.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="p-footer">
+  <span class="p-footer-name">Bala Shunmugam M · B.E. EEE + MBA Operations</span>
+  <div class="p-footer-links"><a href="projects.html"> All Projects</a><a href="index.html">Portfolio</a></div>
+</footer>
+<script>function tab(el,id){const w=el.closest('.p-section');w.querySelectorAll('.p-tab').forEach(t=>t.classList.remove('active'));w.querySelectorAll('.p-panel').forEach(p=>p.classList.remove('active'));el.classList.add('active');w.querySelector('#'+id).classList.add('active');}</script>
+</body>
+</html>
+
+

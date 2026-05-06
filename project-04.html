@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Inventory Optimisation — EOQ Model — Bala Shunmugam M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/project.css"/>
+  <style>:root{--accent:#92400e;--accent-light:#fffbeb;--accent-mid:#fcd070;--accent-dark:#6b2e0a;}</style>
+  <link rel="stylesheet" href="css/common.css" />
+</head>
+<body>
+<nav class="p-nav">
+  <a href="projects.html" class="p-nav-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>All Projects</a>
+  <div class="p-nav-right"><span class="p-nav-name">Bala Shunmugam M</span><span class="p-nav-num">04 / 08</span></div>
+</nav>
+
+<section class="p-hero">
+  <div class="p-eyebrow"><div class="p-eyebrow-dot"></div><span class="p-eyebrow-text">MBA · Operations Management · Inventory Control</span></div>
+  <h1 class="p-title">Inventory Optimisation<br><em>Using the EOQ Model</em></h1>
+  <p class="p-desc">Applied the Economic Order Quantity model to resolve a dual-failure mode in raw material procurement — excess holding cost eroding margins while simultaneous stockouts caused production stoppages. Calculated the optimal order quantity, reorder point, and safety stock from first principles and quantified the financial impact.</p>
+  <div class="p-tags">
+    <span class="p-tag p-tag-accent">MBA · Operations</span>
+    <span class="p-tag">EOQ Model</span><span class="p-tag">Reorder Point</span>
+    <span class="p-tag">Safety Stock</span><span class="p-tag">Inventory Management</span>
+  </div>
+  <div class="p-impact">
+    <div class="p-impact-item"><div class="p-impact-val">18%</div><div class="p-impact-label">Reduction in annual holding cost</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">Q* = √(2DS/H)</div><div class="p-impact-label">EOQ formula applied</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">Eliminated</div><div class="p-impact-label">Stockout frequency</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">ROP + SS</div><div class="p-impact-label">Science-based reorder trigger</div></div>
+  </div>
+</section>
+
+<div class="p-content">
+  <div class="p-section">
+    <div class="p-section-label">Analysis</div>
+    <div class="p-section-title">From Dual-Failure to Optimal Control</div>
+    <div class="p-tabs">
+      <div class="p-tab active" onclick="tab(this,'p4a')">Problem &amp; Analysis</div>
+      <div class="p-tab" onclick="tab(this,'p4b')">EOQ Calculation</div>
+      <div class="p-tab" onclick="tab(this,'p4c')">Live Calculator</div>
+      <div class="p-tab" onclick="tab(this,'p4d')">Impact</div>
+    </div>
+
+    <div id="p4a" class="p-panel active">
+      <div class="p-card-grid">
+        <div class="p-card" style="--card-color:#dc2626"><div class="p-card-label">Problem</div><div class="p-card-text">Two simultaneous failures: <strong>excess inventory</strong> tying up working capital in high holding costs, and <strong>periodic stockouts</strong> causing production stoppages. Neither problem was visible in isolation — the inventory appeared large enough, yet shortages still occurred due to poor reorder timing.</div></div>
+        <div class="p-card" style="--card-color:var(--blue)"><div class="p-card-label">Analysis</div><div class="p-card-text">Collected annual demand (D), ordering cost per purchase order (S), and holding cost per unit per year (H). Plotted total cost curve against varying order quantities to identify the minimum — the EOQ point where ordering cost and holding cost are exactly equal.</div></div>
+        <div class="p-card" style="--card-color:var(--amber)"><div class="p-card-label">Insight — The Real Problem</div><div class="p-card-text">The organisation was ordering in large infrequent batches to get supplier discounts — driving up holding cost while also creating long gaps between orders where stockouts occurred mid-cycle. <strong>Ordering more frequently in smaller batches</strong> costs more per order but saves far more in holding and stockout costs.</div></div>
+        <div class="p-card" style="--card-color:var(--green)"><div class="p-card-label">Solution Framework</div><div class="p-card-text">Three-part solution: <strong>EOQ</strong> gives the optimal order quantity. <strong>ROP</strong> (Reorder Point = lead-time demand) tells you when to order. <strong>Safety Stock</strong> (= z × σ_demand × √lead_time) provides a buffer against demand variability — eliminating stockouts without excess inventory.</div></div>
+      </div>
+    </div>
+
+    <div id="p4b" class="p-panel">
+      <div class="p-callout">
+        <div class="p-callout-title">EOQ Formula Derivation</div>
+        <div class="p-callout-body">Total annual cost = Ordering cost + Holding cost = (D/Q)×S + (Q/2)×H. Minimise by differentiating with respect to Q and setting to zero: dTC/dQ = −DS/Q² + H/2 = 0 → Q* = √(2DS/H). At this point, ordering cost exactly equals holding cost — the economic optimum.</div>
+      </div>
+      <div class="p-table-wrap">
+        <table class="p-table">
+          <thead><tr><th>Variable</th><th>Meaning</th><th>Example Value</th><th>Unit</th></tr></thead>
+          <tbody>
+            <tr><td><strong>D</strong></td><td>Annual demand</td><td>5,000</td><td>units/year</td></tr>
+            <tr><td><strong>S</strong></td><td>Ordering cost per order</td><td>₹200</td><td>₹/order</td></tr>
+            <tr><td><strong>H</strong></td><td>Annual holding cost per unit</td><td>₹5</td><td>₹/unit/year</td></tr>
+            <tr class="row-accent"><td><strong>Q*</strong></td><td>Optimal order quantity (EOQ)</td><td>632</td><td>units</td></tr>
+            <tr><td><strong>ROP</strong></td><td>Reorder point (lead-time demand)</td><td>Lead time × D/365</td><td>units</td></tr>
+            <tr><td><strong>SS</strong></td><td>Safety stock (95% service level)</td><td>z(1.65) × σ × √LT</td><td>units</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="p-findings">
+        <div class="p-finding"><div class="p-finding-num">→</div><div class="p-finding-text"><strong>At Q*:</strong> annual ordering cost = (5000/632) × 200 = ₹1,582. Annual holding cost = (632/2) × 5 = ₹1,580. Equal — confirming Q* is correct.</div></div>
+        <div class="p-finding"><div class="p-finding-num">→</div><div class="p-finding-text"><strong>Before EOQ:</strong> Organisation was ordering Q = 1,500 units/order (3× per year). Holding cost = (1500/2) × 5 = ₹3,750/yr — 2.37× higher than the EOQ optimum. Total cost saving ≈ 18%.</div></div>
+        <div class="p-finding"><div class="p-finding-num">→</div><div class="p-finding-text"><strong>ROP + Safety Stock:</strong> Setting the reorder trigger and buffer eliminates stockouts without increasing average inventory — the surplus from SS is offset by the lower cycle inventory at Q*.</div></div>
+      </div>
+    </div>
+
+    <div id="p4c" class="p-panel">
+      <div class="p-tool">
+        <div class="p-tool-title">EOQ Live Calculator</div>
+        <div class="p-tool-desc">Enter your parameters — results update instantly. All calculations run in-browser.</div>
+        <div class="p-slider-row"><label>Annual demand D (units)</label><input type="range" id="eoq-d" min="500" max="20000" step="100" value="5000" oninput="calcEOQ()"/><div class="p-slider-val" id="sv-d">5,000</div></div>
+        <div class="p-slider-row"><label>Ordering cost per order S (₹)</label><input type="range" id="eoq-s" min="50" max="2000" step="10" value="200" oninput="calcEOQ()"/><div class="p-slider-val" id="sv-s">₹200</div></div>
+        <div class="p-slider-row"><label>Holding cost per unit/year H (₹)</label><input type="range" id="eoq-h" min="1" max="50" step="1" value="5" oninput="calcEOQ()"/><div class="p-slider-val" id="sv-h">₹5</div></div>
+        <div class="p-tool-outputs" style="grid-template-columns:repeat(3,1fr)">
+          <div class="p-tool-out"><div class="p-tool-out-val" id="out-eoq">632</div><div class="p-tool-out-label">EOQ Q* (units)</div></div>
+          <div class="p-tool-out"><div class="p-tool-out-val" id="out-orders">7.9</div><div class="p-tool-out-label">Orders per year</div></div>
+          <div class="p-tool-out"><div class="p-tool-out-val" id="out-cost">₹3,162</div><div class="p-tool-out-label">Min annual total cost</div></div>
+        </div>
+        <div class="p-tool-formula" id="eoq-formula">Q* = √(2 × 5000 × 200 / 5) = 632 units · Orders/yr = 5000/632 = 7.9</div>
+      </div>
+    </div>
+
+    <div id="p4d" class="p-panel">
+      <div class="p-metrics">
+        <div class="p-metric"><div class="p-metric-name">Holding cost reduction</div><div class="p-metric-val c-green">18<span style="font-size:14px">%</span></div><div class="p-metric-sub">Annual saving from optimal Q*</div></div>
+        <div class="p-metric"><div class="p-metric-name">Stockout frequency</div><div class="p-metric-val c-green">→ 0</div><div class="p-metric-sub">Eliminated by ROP + Safety Stock</div></div>
+        <div class="p-metric"><div class="p-metric-name">Service level achieved</div><div class="p-metric-val" style="color:var(--blue)">95<span style="font-size:14px">%</span></div><div class="p-metric-sub">With z = 1.65 safety stock buffer</div></div>
+      </div>
+      <div class="p-callout">
+        <div class="p-callout-title">Key Takeaway</div>
+        <div class="p-callout-body">The EOQ model works not because it produces a magic number, but because it forces an organisation to precisely quantify the opposing cost forces — ordering and holding — and find the exact point where they balance. Most organisations over-order to avoid stockouts and unknowingly pay 2–3× the optimal holding cost as a result.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="p-footer">
+  <span class="p-footer-name">Bala Shunmugam M · B.E. EEE + MBA Operations</span>
+  <div class="p-footer-links"><a href="projects.html"> All Projects</a><a href="index.html">Portfolio</a></div>
+</footer>
+<script>
+function tab(el,id){const w=el.closest('.p-section');w.querySelectorAll('.p-tab').forEach(t=>t.classList.remove('active'));w.querySelectorAll('.p-panel').forEach(p=>p.classList.remove('active'));el.classList.add('active');w.querySelector('#'+id).classList.add('active');}
+function calcEOQ(){
+  const D=+document.getElementById('eoq-d').value;
+  const S=+document.getElementById('eoq-s').value;
+  const H=+document.getElementById('eoq-h').value;
+  document.getElementById('sv-d').textContent=D.toLocaleString();
+  document.getElementById('sv-s').textContent='₹'+S;
+  document.getElementById('sv-h').textContent='₹'+H;
+  const Q=Math.round(Math.sqrt(2*D*S/H));
+  const orders=(D/Q).toFixed(1);
+  const cost=Math.round(2*Math.sqrt(D*S*H/2));
+  document.getElementById('out-eoq').textContent=Q;
+  document.getElementById('out-orders').textContent=orders;
+  document.getElementById('out-cost').textContent='₹'+cost.toLocaleString();
+  document.getElementById('eoq-formula').textContent=`Q* = √(2 × ${D} × ${S} / ${H}) = ${Q} units · Orders/yr = ${D}/${Q} = ${orders}`;
+}
+</script>
+</body>
+</html>
+
+

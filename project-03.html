@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Bottleneck Analysis — Agni Steels — Bala Shunmugam M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/project.css"/>
+  <style>:root{--accent:#7c2d12;--accent-light:#fef3ee;--accent-mid:#f4c4a8;--accent-dark:#5a1f0b;}</style>
+  <link rel="stylesheet" href="css/common.css" />
+</head>
+<body>
+<nav class="p-nav">
+  <a href="projects.html" class="p-nav-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>All Projects</a>
+  <div class="p-nav-right"><span class="p-nav-name">Bala Shunmugam M</span><span class="p-nav-num">03 / 08</span></div>
+</nav>
+
+<section class="p-hero">
+  <div class="p-eyebrow"><div class="p-eyebrow-dot"></div><span class="p-eyebrow-text">MBA Internship · Agni Steels · Operations Analysis</span></div>
+  <h1 class="p-title">Production Bottleneck Analysis<br><em>in Steel Manufacturing</em></h1>
+  <p class="p-desc">Identified and quantified a recurring delay at the cooler stage in a 5-step steel production line. Applied process mapping and downtime logging to prove the cooler as the binding constraint — accounting for 46% of total daily downtime and holding overall efficiency at 83% against a 90% target.</p>
+  <div class="p-tags">
+    <span class="p-tag p-tag-accent">Internship · Agni Steels</span>
+    <span class="p-tag">Theory of Constraints</span>
+    <span class="p-tag">Process Mapping</span>
+    <span class="p-tag">Downtime Analysis</span>
+    <span class="p-tag">OEE</span>
+  </div>
+  <div class="p-impact">
+    <div class="p-impact-item"><div class="p-impact-val">46%</div><div class="p-impact-label">Cooler share of total daily downtime</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">1.1 hr/day</div><div class="p-impact-label">Cooler average downtime</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">83%</div><div class="p-impact-label">Overall efficiency (vs 90% target)</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">487</div><div class="p-impact-label">Units/day output (target: 500)</div></div>
+    <div class="p-impact-item"><div class="p-impact-val">12–15%</div><div class="p-impact-label">Projected cycle time reduction</div></div>
+  </div>
+</section>
+
+<div class="p-content">
+  <div class="p-section">
+    <div class="p-section-label">Analysis</div>
+    <div class="p-section-title">Identifying the Binding Constraint</div>
+    <div class="p-tabs">
+      <div class="p-tab active" onclick="tab(this,'p3a')">Problem &amp; Method</div>
+      <div class="p-tab" onclick="tab(this,'p3b')">Downtime Data</div>
+      <div class="p-tab" onclick="tab(this,'p3c')">Root Cause</div>
+      <div class="p-tab" onclick="tab(this,'p3d')">Recommendations</div>
+    </div>
+
+    <div id="p3a" class="p-panel active">
+      <div class="p-card-grid">
+        <div class="p-card" style="--card-color:#dc2626"><div class="p-card-label">Problem</div><div class="p-card-text">Daily output of 487 units consistently below the 500-unit target, resulting in 83% overall efficiency against the 90% management benchmark. Root cause was unclear — multiple stages experienced downtime, making it difficult to identify the primary constraint without structured analysis.</div></div>
+        <div class="p-card" style="--card-color:var(--blue)"><div class="p-card-label">Methodology</div><div class="p-card-text">Walked all 5 production stages daily for the internship period. Logged start and end times of each stoppage event with reason codes. Aggregated by stage to compute average daily downtime and percentage contribution. Cross-validated against production log sheets.</div></div>
+        <div class="p-card" style="--card-color:var(--amber)"><div class="p-card-label">Theory of Constraints Applied</div><div class="p-card-text">Goldratt's Theory of Constraints states: the throughput of any system is determined by its weakest link (the constraint). All other stages have excess capacity relative to the constraint — so improving non-constraints doesn't improve system throughput. <strong>Focus all effort on the cooler.</strong></div></div>
+        <div class="p-card" style="--card-color:var(--green)"><div class="p-card-label">Key Finding</div><div class="p-card-text">The cooler stage contributed <strong>1.1 out of 2.4 total downtime hours per day</strong> — 46% of system downtime despite being one of five stages. The next largest contributor was the kiln at just 0.5 hr/day. Eliminating cooler downtime alone would push efficiency from 83% to near 90%.</div></div>
+      </div>
+    </div>
+
+    <div id="p3b" class="p-panel">
+      <div class="p-metrics" style="grid-template-columns:repeat(3,1fr)">
+        <div class="p-metric"><div class="p-metric-name">Total daily downtime</div><div class="p-metric-val c-red">2.4 <span style="font-size:14px">hrs</span></div><div class="p-metric-sub">Average across all stages</div></div>
+        <div class="p-metric"><div class="p-metric-name">Cooler downtime</div><div class="p-metric-val" style="color:#ea580c">1.1 <span style="font-size:14px">hrs</span></div><div class="p-metric-sub">46% of total — binding constraint</div></div>
+        <div class="p-metric"><div class="p-metric-name">Efficiency gap</div><div class="p-metric-val c-amber">7 <span style="font-size:14px">pp</span></div><div class="p-metric-sub">83% actual vs 90% target</div></div>
+      </div>
+      <div class="p-barchart">
+        <div class="p-barchart-title">Stage-wise Downtime — Average Hours per Day</div>
+        <div class="p-bar-row"><div class="p-bar-label">Conveyor</div><div class="p-bar-track"><div class="p-bar-fill" style="width:13%;background:#60a5fa"></div></div><div class="p-bar-val">0.3 hr</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Bunker</div><div class="p-bar-track"><div class="p-bar-fill" style="width:17%;background:#60a5fa"></div></div><div class="p-bar-val">0.4 hr</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Kiln</div><div class="p-bar-track"><div class="p-bar-fill" style="width:21%;background:#60a5fa"></div></div><div class="p-bar-val">0.5 hr</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Cooler ⚠ Constraint</div><div class="p-bar-track"><div class="p-bar-fill" style="width:46%;background:#f87171"></div></div><div class="p-bar-val">1.1 hr</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">ESP</div><div class="p-bar-track"><div class="p-bar-fill" style="width:4%;background:#60a5fa"></div></div><div class="p-bar-val">0.1 hr</div></div>
+      </div>
+      <div class="p-barchart">
+        <div class="p-barchart-title">Weekly Efficiency Trend (%)</div>
+        <div class="p-bar-row"><div class="p-bar-label">Week 1</div><div class="p-bar-track"><div class="p-bar-fill" style="width:79%;background:#4ade80"></div></div><div class="p-bar-val">79%</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Week 2</div><div class="p-bar-track"><div class="p-bar-fill" style="width:81%;background:#4ade80"></div></div><div class="p-bar-val">81%</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Week 3</div><div class="p-bar-track"><div class="p-bar-fill" style="width:76%;background:#f87171"></div></div><div class="p-bar-val">76%</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Week 4</div><div class="p-bar-track"><div class="p-bar-fill" style="width:83%;background:#4ade80"></div></div><div class="p-bar-val">83%</div></div>
+        <div class="p-bar-row"><div class="p-bar-label">Week 5</div><div class="p-bar-track"><div class="p-bar-fill" style="width:88%;background:#4ade80"></div></div><div class="p-bar-val">88%</div></div>
+      </div>
+    </div>
+
+    <div id="p3c" class="p-panel">
+      <div class="p-callout">
+        <div class="p-callout-title">Why the cooler breaks down most often</div>
+        <div class="p-callout-body">The cooler handles the highest thermal stress in the production line — it receives hot material directly from the kiln and must cool it rapidly. Repeated thermal cycling degrades mechanical components faster than any other stage. Without predictive monitoring, failures arrive without warning.</div>
+      </div>
+      <div class="p-findings">
+        <div class="p-finding"><div class="p-finding-num">01</div><div class="p-finding-text"><strong>Thermal fatigue:</strong> Repeated heating and cooling cycles cause micro-cracking in cooler grate plates and seals, leading to periodic breakdowns that appear random but follow a predictable cumulative damage pattern.</div></div>
+        <div class="p-finding"><div class="p-finding-num">02</div><div class="p-finding-text"><strong>No early warning system:</strong> Operators had no temperature or vibration monitoring on cooler components. Failures were discovered reactively — only when the line stopped — rather than proactively from condition monitoring trends.</div></div>
+        <div class="p-finding"><div class="p-finding-num">03</div><div class="p-finding-text"><strong>Cascading idle time:</strong> When the cooler stops, upstream stages (kiln, bunker, conveyor) must also stop or slow — amplifying the direct downtime into system-wide lost output far greater than the cooler downtime alone.</div></div>
+        <div class="p-finding"><div class="p-finding-num">04</div><div class="p-finding-text"><strong>Week 3 spike to 76%:</strong> Traced to an unplanned cooler replacement event. The absence of a standby component and a slow procurement process extended the stoppage — a supply chain vulnerability compounding the maintenance gap.</div></div>
+      </div>
+    </div>
+
+    <div id="p3d" class="p-panel">
+      <div class="p-recs">
+        <div class="p-rec"><span class="p-rec-tag rec-now">Immediate</span><div class="p-rec-text"><strong>Install temperature monitoring on cooler grate plates</strong> — wireless sensors transmitting to the DCS. Set alarm thresholds before failure temperature to give operators 30–60 minutes warning for planned intervention.</div></div>
+        <div class="p-rec"><span class="p-rec-tag rec-now">Immediate</span><div class="p-rec-text"><strong>Maintain one spare grate assembly on-site</strong> — the most frequently replaced cooler component. Estimated cost < ₹50,000; eliminates the 8–12 hr procurement delay that extended the Week 3 stoppage.</div></div>
+        <div class="p-rec"><span class="p-rec-tag rec-mid">Short-term</span><div class="p-rec-text"><strong>Establish a preventive replacement schedule</strong> for grate plates and seals based on cumulative operating hours — before thermal fatigue failure occurs. Align to planned weekend maintenance windows to avoid mid-shift breakdowns.</div></div>
+        <div class="p-rec"><span class="p-rec-tag rec-mid">Short-term</span><div class="p-rec-text"><strong>Apply Theory of Constraints five-step process:</strong> 1) Identify — cooler confirmed. 2) Exploit — maximise cooler uptime. 3) Subordinate — adjust all other stages to support cooler. 4) Elevate — invest in cooler capacity and reliability. 5) Repeat — check for new constraint.</div></div>
+        <div class="p-rec"><span class="p-rec-tag rec-long">Medium-term</span><div class="p-rec-text"><strong>Projected outcome:</strong> Reducing cooler downtime from 1.1 to 0.3 hr/day (matching the kiln as the new limiting stage) would raise overall efficiency from 83% to approximately <strong>90%</strong> — closing the performance gap entirely.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="p-footer">
+  <span class="p-footer-name">Bala Shunmugam M · B.E. EEE + MBA Operations</span>
+  <div class="p-footer-links"><a href="projects.html"> All Projects</a><a href="index.html">Portfolio</a></div>
+</footer>
+<script>function tab(el,id){const w=el.closest('.p-section');w.querySelectorAll('.p-tab').forEach(t=>t.classList.remove('active'));w.querySelectorAll('.p-panel').forEach(p=>p.classList.remove('active'));el.classList.add('active');w.querySelector('#'+id).classList.add('active');}</script>
+</body>
+</html>
+
+

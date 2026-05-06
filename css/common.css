@@ -1,0 +1,412 @@
+/*
+  Shared professional theme for the complete portfolio.
+  This file intentionally overrides page-specific styles so every page feels
+  like one coherent site.
+*/
+
+:root {
+  --brand: #1f4e79;
+  --brand-2: #0f766e;
+  --accent: var(--brand);
+  --accent-light: #eef6fc;
+  --accent-mid: #b8d8ee;
+  --accent-dark: #153957;
+
+  --blue: var(--brand);
+  --blue-mid: #2f79b7;
+  --blue-light: #eef6fc;
+  --teal: var(--brand-2);
+  --teal-mid: #159482;
+  --teal-light: #edf8f6;
+  --amber: #9a6700;
+  --amber-mid: #d18a00;
+  --amber-light: #fff7e6;
+  --red: #b42318;
+  --red-mid: #d92d20;
+  --red-light: #fff1f0;
+  --green: #217a3d;
+  --green-light: #eef8f1;
+
+  --text-primary: #172033;
+  --text-secondary: #475467;
+  --text-muted: #667085;
+  --border: #e4e7ec;
+  --border-strong: #cfd5df;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f9fc;
+  --bg-tertiary: #eef2f6;
+  --ink: #ffffff;
+  --ink-2: #f7f9fc;
+  --ink-3: #eef2f6;
+  --steel: #cfd5df;
+  --ghost: #667085;
+  --muted: #667085;
+  --rule: #e4e7ec;
+  --rule-light: #cfd5df;
+  --surface: #ffffff;
+  --surface-2: #f7f9fc;
+  --surface-3: #eef2f6;
+  --text: #172033;
+  --text-2: #475467;
+  --text-3: #667085;
+  --amber-glow: #fff7e6;
+  --amber-ring: #f6d28b;
+  --teal-dim: #edf8f6;
+  --blue-dim: #eef6fc;
+  --rose: #b42318;
+  --rose-dim: #fff1f0;
+  --violet: #5b21b6;
+  --violet-dim: #f4f0ff;
+  --orange: #c05621;
+  --orange-dim: #fff4ed;
+
+  --bg: #ffffff;
+  --bg-raised: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --bg-muted: #eef2f6;
+  --bd: #e4e7ec;
+  --bd-strong: #cfd5df;
+  --tx: #172033;
+  --tx-2: #475467;
+  --tx-3: #667085;
+  --tx-4: #98a2b3;
+
+  --font-body: Inter, "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Instrument Serif", "DM Serif Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", "DM Mono", Consolas, monospace;
+  --f-body: var(--font-body);
+  --f-display: var(--font-display);
+  --f-mono: var(--font-mono);
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 10px;
+  --r-xl: 12px;
+
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-hover: 0 12px 32px rgba(16, 24, 40, 0.10);
+  --sh-1: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --sh-2: 0 8px 24px rgba(16, 24, 40, 0.08);
+  --sh-3: 0 16px 40px rgba(16, 24, 40, 0.12);
+
+  --max-w: 1120px;
+  --w: 1120px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 44%, #ffffff 100%);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(31, 78, 121, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 78, 121, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  height: auto;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(31, 78, 121, 0.25);
+  outline-offset: 3px;
+}
+
+.navbar,
+.nav,
+.p-nav {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  color: var(--text-primary) !important;
+}
+
+.nav-logo,
+.p-nav-name,
+.nav-title {
+  color: var(--text-primary) !important;
+}
+
+.nav-links a,
+.nav-back,
+.p-nav-back,
+.p-footer-links a,
+.page-footer a {
+  color: var(--text-secondary) !important;
+}
+
+.nav-links a:hover,
+.nav-back:hover,
+.p-nav-back:hover,
+.p-footer-links a:hover,
+.page-footer a:hover {
+  color: var(--brand) !important;
+}
+
+.nav-links .nav-cta,
+.btn-primary,
+.open-project-btn {
+  background: var(--brand) !important;
+  border-color: var(--brand) !important;
+  color: #ffffff !important;
+}
+
+.nav-links .nav-cta:hover,
+.btn-primary:hover,
+.open-project-btn:hover {
+  background: #163d61 !important;
+  border-color: #163d61 !important;
+}
+
+.btn-outline,
+.expand-btn,
+.filter-btn {
+  background: #ffffff !important;
+  border: 1px solid var(--border-strong) !important;
+  color: var(--text-primary) !important;
+}
+
+.btn-outline:hover,
+.expand-btn:hover,
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--brand) !important;
+  color: var(--brand) !important;
+  background: var(--accent-light) !important;
+}
+
+.hero,
+.page-hero,
+.p-hero {
+  max-width: var(--max-w) !important;
+}
+
+.page-hero::before {
+  display: none !important;
+}
+
+.hero-title,
+.page-title,
+.p-title,
+.section-title,
+.p-section-title,
+.role-fit-title,
+.card-title,
+.project-title {
+  color: var(--text-primary) !important;
+  letter-spacing: 0 !important;
+}
+
+.hero-title em,
+.page-title em,
+.p-title em,
+.logo-dot,
+.section-label,
+.p-section-label,
+.eyebrow-text,
+.p-eyebrow-text,
+.p-impact-val,
+.stat-val span,
+.card-num,
+.p-nav-num {
+  color: var(--brand) !important;
+}
+
+.hero-badge,
+.p-tag-accent,
+.tag,
+.badge,
+.nav-count,
+.p-nav-num,
+.chip,
+.impact-chip,
+.tool-pill,
+.s-badge {
+  border-radius: 6px !important;
+}
+
+.hero-badge,
+.badge-blue,
+.tag-blue,
+.p-tag-accent,
+.nav-count,
+.p-nav-num,
+.s-badge.sb-star {
+  background: var(--accent-light) !important;
+  border-color: var(--accent-mid) !important;
+  color: var(--brand) !important;
+}
+
+.section-alt,
+.hero-visual,
+.strength-card,
+.metric-card,
+.chart-card,
+.tool-card,
+.blog-card,
+.contact-card,
+.project-card,
+.card-top,
+.p-card,
+.p-metric,
+.p-tool,
+.p-rec,
+.p-fig,
+.p-impact,
+.pasi-cell,
+.metric-box,
+.swot-cell,
+.rec-item,
+.diff-card {
+  background: #ffffff !important;
+  border-color: var(--border) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+.section-alt {
+  background: var(--bg-secondary) !important;
+}
+
+.project-card,
+.tool-card,
+.blog-card,
+.contact-card,
+.metric-card,
+.chart-card,
+.p-card,
+.p-metric,
+.p-tool,
+.p-rec,
+.p-fig,
+.diff-card {
+  border-radius: 10px !important;
+}
+
+.project-card:hover,
+.tool-card:hover,
+.blog-card:hover,
+.contact-card:hover,
+.metric-card:hover,
+.chart-card:hover,
+.p-card:hover,
+.p-metric:hover,
+.p-tool:hover,
+.p-rec:hover,
+.p-fig:hover,
+.diff-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover) !important;
+}
+
+.project-card::before {
+  background: var(--brand) !important;
+}
+
+.hero-sub,
+.section-intro,
+.project-desc,
+.card-desc,
+.p-desc,
+.p-prose,
+.p-card-text,
+.p-finding-text,
+.p-rec-text,
+.p-callout-body,
+.p-compare-desc,
+.diff-desc,
+.step-text {
+  color: var(--text-secondary) !important;
+}
+
+.metric-label,
+.metric-trend,
+.p-impact-label,
+.p-metric-name,
+.p-metric-sub,
+.contact-label,
+.blog-meta,
+.p-footer-name,
+.page-footer,
+.footer p {
+  color: var(--text-muted) !important;
+}
+
+.calc-result,
+.bar-blue,
+.bar-teal,
+.mbar-fill {
+  background: var(--brand) !important;
+}
+
+.bar-red,
+.trend-down {
+  color: var(--red) !important;
+}
+
+.trend-up,
+.c-green {
+  color: var(--green) !important;
+}
+
+.p-callout {
+  background: var(--accent-light) !important;
+  border-color: var(--accent-mid) !important;
+  border-left-color: var(--brand) !important;
+}
+
+.p-table th,
+.data-table th {
+  background: var(--bg-secondary) !important;
+  color: var(--text-muted) !important;
+}
+
+.p-code {
+  background: #172033 !important;
+  border-radius: 10px !important;
+}
+
+.contact-value {
+  overflow-wrap: anywhere;
+}
+
+.p-fig img {
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .nav-links.open {
+    background: #ffffff !important;
+  }
+
+  .hero,
+  .page-hero,
+  .p-hero,
+  .p-content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
